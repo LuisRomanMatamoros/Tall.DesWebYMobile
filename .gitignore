@@ -1,0 +1,14 @@
+apps/market/__pycache__/__init__.cpython-312.pyc
+apps/market/__pycache__/forms.cpython-312.pyc
+apps/market/__pycache__/models.cpython-312.pyc
+apps/market/__pycache__/urls.cpython-312.pyc
+apps/market/__pycache__/views.cpython-312.pyc
+*.py
+crud/__pycache__/__init__.cpython-312.pyc
+crud/__pycache__/settings.cpython-312.pyc
+crud/__pycache__/urls.cpython-312.pyc
+crud/__pycache__/wsgi.cpython-312.pyc
+db.sqlite3
+.DS_Store
+apps/market/migrations/__pycache__/__init__.cpython-312.pyc
+apps/market/migrations/__pycache__/0001_initial.cpython-312.pyc

@@ -1,0 +1,57 @@
+{% load widget_tweaks %}
+<form enctype="multipart/form-data" method="post">
+    {% csrf_token %}
+    <div class="row">
+        <div class="input-field col s12">
+            <input type="text" name="nombre" id="nombre" class="validate" required value="{{ form.initial.nombre }}">
+            <label for="nombre">Nombre</label>
+        </div>
+
+        <div class="input-field col s12">
+            <input type="date" name="fecha_nacimiento" id="fecha_nacimiento" class="validate" required value="{{ form.initial.fecha_nacimiento|date:'Y-m-d' }}">
+            <label for="fecha_nacimiento" class="active">Fecha de nacimiento</label>
+        </div>
+
+        <div class="input-field col s12">
+            <input type="text" name="especialidad" id="especialidad" class="validate" required value="{{ form.initial.especialidad }}">
+            <label for="especialidad">Especialidad</label>
+        </div>
+
+        <div class="input-field col s12">
+            <input type="number" name="valor_hora" id="valor_hora" class="validate" step="0.01" required value="{{ form.initial.valor_hora }}">
+            <label for="valor_hora">Valor hora</label>
+        </div>
+
+        <div class="input-field col s12">
+            <input type="text" name="disponibilidad" id="disponibilidad" class="validate" required value="{{ form.initial.disponibilidad }}">
+            <label for="disponibilidad">Disponibilidad</label>
+        </div>
+
+        <div class="input-field col s12">
+            <input type="text" name="telefono" id="telefono" class="validate" required value="{{ form.initial.telefono }}">
+            <label for="telefono">Teléfono</label>
+        </div>
+
+        <div class="input-field col s12">
+            <input type="email" name="correo" id="correo" class="validate" required value="{{ form.initial.correo }}">
+            <label for="correo">Correo electrónico</label>
+        </div>
+
+        <div class="input-field col s12">
+            <textarea name="certificaciones" id="certificaciones" class="materialize-textarea">{{ form.initial.certificaciones }}</textarea>
+            <label for="certificaciones">Certificaciones</label>
+        </div>
+
+        <div class="input-field col s12">
+            <textarea name="referencias" id="referencias" class="materialize-textarea">{{ form.initial.referencias }}</textarea>
+            <label for="referencias">Referencias</label>
+        </div>
+    </div>
+
+    <div class="row">
+        <button class="btn waves-effect waves-light right red darken-1" type="submit" name="action">
+            {% if form.instance.pk %}Guardar cambios{% else %}Crear trabajador{% endif %}
+            <i class="material-icons right">send</i>
+        </button>
+    </div>
+</form>
